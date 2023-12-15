@@ -20,4 +20,19 @@ search function:
 
 ![image](https://github.com/aparnasahu5/word-search/assets/95071662/6fd29b80-5ccf-45d5-9a23-d464cbc4fca4)
 
+search not found:
+
+![image](https://github.com/aparnasahu5/word-search/assets/95071662/a0e4c5dc-728f-4366-ae0a-ed18c4d25468)
+
+generate new grid:
+
+![image](https://github.com/aparnasahu5/word-search/assets/95071662/7dbb96c2-b46a-4e42-8198-f15c1ef73285)
+
+PLEASE CHECK BACK IN A WHILE FOR MORE STLYING AND ADDITIONAL FEATURES.
+
+
+
+
+
+
 
