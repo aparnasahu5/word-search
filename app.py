@@ -1,15 +1,19 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from typing import List, Tuple
 from itertools import product
 import random
 from collections import Counter
 
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'
 
-def generate_random_grid():
+def generate_random_grid(previous_grid=None):
     alphabets = [chr(i) for i in range(ord('A'), ord('Z') + 1)]
-    grid = [[random.choice(alphabets) for _ in range(9)] for _ in range(9)]
-    return grid
+    
+    while True:
+        grid = [[random.choice(alphabets) for _ in range(9)] for _ in range(9)]
+        if grid != previous_grid:
+            return grid
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> List[Tuple[int, int]]:
@@ -47,16 +51,18 @@ def index():
     if request.method == 'POST':
         user_input = request.form['word'].upper()
         sol = Solution()
-        result = sol.exist(random_grid, user_input)
-        return render_template('index.html', grid=random_grid, result=result)
+        result = sol.exist(session['random_grid'], user_input)
+        return render_template('index.html', grid=session['random_grid'], result=result)
     else:
-        return render_template('index.html', grid=random_grid, result=None)
+        session['random_grid'] = generate_random_grid()
+        return render_template('index.html', grid=session['random_grid'], result=None)
 
 @app.route('/generate_grid', methods=['POST'])
 def generate_grid():
-    random_grid = generate_random_grid()
+    session['random_grid'] = generate_random_grid(session['random_grid'])
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
     random_grid = generate_random_grid()
+    app.secret_key = 'super_secret_key'
     app.run(debug=True)
