@@ -26,7 +26,8 @@ search not found:
 
 generate new grid:
 
-![image](https://github.com/aparnasahu5/word-search/assets/95071662/7dbb96c2-b46a-4e42-8198-f15c1ef73285)
+![image](https://github.com/aparnasahu5/word-search/assets/95071662/5513a61f-9980-47fd-b861-5244bcc972c2)
+
 
 PLEASE CHECK BACK IN A WHILE FOR MORE STLYING AND ADDITIONAL FEATURES.
 
