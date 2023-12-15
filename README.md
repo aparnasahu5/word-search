@@ -1,11 +1,10 @@
 # word-search
 
-WORD SEARCH :(basic functionalities completed, additional yet to be added )
+WORD SEARCH :(basic functionalities completed, additional features yet to be added )
 
- 1.  A  Python program which generates a randomized 9 x 9 grid of  capital english alphabets (from A-Z).
+1.  A  Python program which generates a randomized 9 x 9 grid of  capital english alphabets (from A-Z).
 
-2.(Please clarify)
- An added program where the user can input a word into the program and it must search for the given word in a randomly generated word grid.
+2. An added program where the user can input a word into the program and it must search for the given word in a randomly generated word grid.
 It should display the co-ordinates of the alphabets in the word being searched in the grid.
 
 for eg If you are searching for CAN in the grid and you find it, then the output should be C=3:5, A=3:6, N=4:6 where the first digit is the row_no and the second digit is the column_no. 
